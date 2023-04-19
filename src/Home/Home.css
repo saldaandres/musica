@@ -1,0 +1,7 @@
+.banner {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-vite-andres.appspot.com/o/banner.jpg?alt=media&token=74ef65e0-b0a1-4c07-8061-42cebda6e66a");
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    padding: 25%;
+}
