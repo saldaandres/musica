@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function Menu() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg menu navbar-dark">
+            <nav className="navbar navbar-expand-lg menu navbar-dark sticky-top">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to={"/"}>Def Leppard</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"

@@ -1,0 +1,7 @@
+.recortado {
+    clip-path: polygon(1em 0%, 100% 0%, calc(100% - 1em) 100%, 0% 100%);
+}
+
+mayuscula {
+    text-transform: uppercase;
+}

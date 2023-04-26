@@ -7,12 +7,12 @@ import {Menu} from "../shared/Menu/Menu.jsx";
 export function Rutas() {
     return (
         <>
-            <Menu />
+            <Menu/>
             <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/historia" element={<Historia/>}/>
-            <Route path="/integrantes" element={<Members/>}/>
-        </Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/historia" element={<Historia/>}/>
+                <Route path="/integrantes" element={<Members/>}/>
+            </Routes>
         </>
     )
 }
