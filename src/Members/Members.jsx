@@ -64,9 +64,9 @@ export function Members() {
                 <div className="card-body p-4">
                     <h1 className={"text-bg-dark mb-4 mayuscula"}>{miembro.nombre}</h1>
                     {miembro.roles.map((rol, index) =>
-                        <span className={"rol me-2 bg-danger fw-medium px-4 py-2 recortado mayuscula"}>{rol}</span>
+                        <span className={"rol me-2 bg-danger fw-medium px-4 py-2 recortado-dos-lados mayuscula"}>{rol}</span>
                     )}
-                    <h3 className={"bg-black text-bg-dark mt-4 px-3 py-2 recortado mayuscula"}>Biografía</h3>
+                    <h3 className={"bg-black text-bg-dark mt-4 px-3 py-2 recortado-un-lado mayuscula"}>Biografía</h3>
                     <p className={"text-bg-dark"}>{miembro.biografia}</p>
                 </div>
             </div>

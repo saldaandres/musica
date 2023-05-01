@@ -1,7 +1,7 @@
 .banner {
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-vite-andres.appspot.com/o/banner.jpg?alt=media&token=74ef65e0-b0a1-4c07-8061-42cebda6e66a");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-vite-andres.appspot.com/o/defLeppard%2Fbanner.jpg?alt=media&token=7eb8d2f7-a1b6-4bf9-a8a5-338c14100307");
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    padding: 25%;
+    height: 700px;
 }

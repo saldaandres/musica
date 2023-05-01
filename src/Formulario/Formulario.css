@@ -1,0 +1,24 @@
+input[type = 'radio'] {
+    border: 1px solid red;
+    appearance: none;
+    background-color:  rgb(var(--bs-dark));
+    transition: all ease-in 0.2s;
+}
+
+input[type = 'radio']:checked {
+    background-color: red;
+}
+
+form > label {
+    font-size: 2rem;
+}
+
+input[type = 'email'], input[type = 'date'], input[type = 'password'], input[type = 'text']  {
+    background-color: rgb(var(--bs-dark));
+    color: white;
+}
+
+input[type = 'email']:focus, input[type = 'date']:focus, input[type = 'password']:focus, input[type= 'text']:focus {
+    background-color: rgb(var(--bs-dark));
+    color: white;
+}

@@ -1,4 +1,37 @@
-.menu {
-    background-color: darkslategray;
+.logo {
+    width: 200px;
+}
+
+.cinta {
+    height: 30px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.navbar, .menu {
+    background-color: transparent;
+}
+
+#navbarLeft, #navbarRight {
+   background-color: #05030c;
+}
+
+#navbarLeft {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 50px) 100%, 0% 100%);
+}
+
+#navbarRight {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50px 100%);
+}
+
+@media (max-width: 1000px) {
+    #link-logo {
+        order: -1;
+    }
+
+    #navbarLeft, #navbarRight {
+        background-color: transparent;
+        color: #0c0304;
+    }
+
 }
 
