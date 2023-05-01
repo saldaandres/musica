@@ -1,0 +1,18 @@
+.fila {
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .fila {
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+
+
