@@ -1,11 +1,17 @@
 import './Menu.css'
 import { Link } from "react-router-dom";
 
+
 export function Menu() {
     return (
         <>
-            <div className="cinta"></div>
-            <nav className="navbar navbar-expand-lg menu navbar-dark mt-0 fst-italic text-uppercase  fs-4 sticky-top">
+            <div className="cinta text-light d-flex gap-2 justify-content-center p-2">
+                <span className={"bi bi-tiktok"}></span>
+                <span className={"bi bi-instagram"}></span>
+                <span className={"bi bi-facebook"}></span>
+                <span className={"bi bi-spotify"}></span>
+            </div>
+            <nav className="navbar navbar-expand-lg menu navbar-dark mt-4 fst-italic text-uppercase  fs-4 fixed-top">
                 <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target=".navbar-collapse" aria-controls="navbarLeft navbarRight" aria-expanded="false"

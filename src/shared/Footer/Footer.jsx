@@ -7,7 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 export function Footer() {
     return (
         <section>
-            <div className="fila bg-black text-bg-dark">
+            <div className="fila text-bg-dark fst-italic text-uppercase fs-4">
                 <div className={"columna"}>
                     <span><i className={"bi bi-c-circle text-danger"}></i> Def Leppard, 2023</span>
                 </div>

@@ -58,14 +58,15 @@ export function Members() {
     ]
 
     const divList = miembros.map((miembro) =>
-        <div key={miembro.id}>
-            <div className={"miembro col-10 col-md-11 m-auto mt-5 d-flex border-white"}>
-                <img className={"card-img w-25"} src={miembro.foto} alt=""/>
+        <div key={miembro.id} className={"col-10 col-md-8 col-lg-7"}>
+            <div className={"miembro mx-auto mt-5 border-white"}>
+                <img className={"card-img"} src={miembro.foto} alt=""/>
                 <div className="card-body p-4">
                     <h1 className={"text-bg-dark mb-4 mayuscula"}>{miembro.nombre}</h1>
-                    {miembro.roles.map((rol, index) =>
-                        <span className={"rol me-2 bg-danger fw-medium px-4 py-2 recortado-dos-lados mayuscula"}>{rol}</span>
-                    )}
+                    <p> {miembro.roles.map((rol, index) =>
+                        <span
+                            className={"rol me-2 bg-danger fw-medium px-3 py-2 recortado-dos-lados mayuscula"}>{rol}</span>
+                    )}</p>
                     <h3 className={"bg-black text-bg-dark mt-4 px-3 py-2 recortado-un-lado mayuscula"}>Biografía</h3>
                     <p className={"text-bg-dark"}>{miembro.biografia}</p>
                 </div>
@@ -74,7 +75,7 @@ export function Members() {
     )
 
     return (
-        <div className={"row bg-dark row-cols-1 "}>
+        <div className={"row bg-dark justify-content-center"}>
             {divList}
         </div>
     )

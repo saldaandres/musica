@@ -6,20 +6,12 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Fans} from "../Fans/Fans.jsx";
 import {Formulario} from "../Formulario/Formulario.jsx";
+import {Shop} from "../Shop/Shop.jsx";
 
 export function Home() {
     return (
         <>
-            <div className="banner">
-                <Menu />
-            </div>
-            <Formulario />
-            {/*
-
-            3. Tienda. Los productos deben tener los siguientes datos: foto, nombre, precio, descripcion. Tambien
-             ponerle un carrusel o un banner.
-            */}
-            <Footer/>
+            <Historia />
         </>
     )
 }

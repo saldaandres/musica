@@ -3,7 +3,7 @@
 }
 
 .cinta {
-    height: 30px;
+    height: 40px;
     background-color: rgba(0,0,0,0.2);
 }
 
@@ -12,7 +12,8 @@
 }
 
 #navbarLeft, #navbarRight {
-   background-color: #05030c;
+   /*background-color: #05030c;*/
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-vite-andres.appspot.com/o/defLeppard%2FProductos%2Fbackground_noise.jpg?alt=media&token=7b6d57e1-db4b-445c-af3f-8069d46db3c4");
 }
 
 #navbarLeft {

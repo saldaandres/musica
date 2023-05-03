@@ -13,11 +13,14 @@ import {Members} from "./Members/Members.jsx";
 import {Music} from "./Music/Music.jsx";
 import {Menu} from "./shared/Menu/Menu.jsx";
 import {Footer} from "./shared/Footer/Footer.jsx";
+import {Navbar} from "./shared/Navbar/Navbar.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+        <Navbar />
         <Rutas />
+        <Footer/>
     </BrowserRouter>
   </React.StrictMode>,
 )

@@ -36,9 +36,9 @@ export function Fans() {
 
     let buttonList = preguntas.map(pregunta =>
         <div key={"Buton" + pregunta.id} >
-            <h2 className={"accordion-header mx-2"}>
-                <button className={ (pregunta.id === 1) ? "btn bg-danger" : "btn bg-danger collapsed"} type={"button"} data-bs-toggle={"collapse"} data-bs-target={"#collapse" + pregunta.id} aria-expanded={pregunta.id === 1} aria-controls={"collapse" + pregunta.id}>
-                    {"Pregunta " + pregunta.id}
+            <h2 className={"accordion-header mx-3 recortado-dos-lados"}>
+                <button className={ (pregunta.id === 1) ? "px-5 btn bg-danger" : "px-5 btn bg-danger collapsed"} type={"button"} data-bs-toggle={"collapse"} data-bs-target={"#collapse" + pregunta.id} aria-expanded={pregunta.id === 1} aria-controls={"collapse" + pregunta.id}>
+                    {pregunta.id}
                 </button>
             </h2>
         </div>

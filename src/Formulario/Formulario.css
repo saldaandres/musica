@@ -5,6 +5,10 @@ input[type = 'radio'] {
     transition: all ease-in 0.2s;
 }
 
+form {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-vite-andres.appspot.com/o/defLeppard%2FProductos%2Fbackground_noise.jpg?alt=media&token=7b6d57e1-db4b-445c-af3f-8069d46db3c4");
+}
+
 input[type = 'radio']:checked {
     background-color: red;
 }
@@ -22,3 +26,4 @@ input[type = 'email']:focus, input[type = 'date']:focus, input[type = 'password'
     background-color: rgb(var(--bs-dark));
     color: white;
 }
+
