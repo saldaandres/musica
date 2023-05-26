@@ -1,0 +1,22 @@
+# curl -X POST "https://accounts.spotify.com/api/token"
+#     -H "Content-Type: application/x-www-form-urlencoded"
+#     -d "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret"
+POST https://accounts.spotify.com/api/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&client_id=2ac3d0a4fbdc4f6ab82251a00ec76093&client_secret=ff4d27295f514c0f8ebb5b6c4739b6d8
+
+
+###
+
+# curl --request GET
+#  --url https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI/top-tracks
+#  --header 'Authorization: Bearer BQC6hk...KWQJgN'
+GET https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI/top-tracks?market=US
+Authorization: Bearer BQCePkFSodL5hYBtj_fB6FS5LpjWxVgIuXcQGkJv8V-AxGk-uMWGHPEd4NkyxMUsB5N4nPpCy1sa_zBU1hpv1BAeytbX3KECTn6mGyrhZWJwCqP73sk
+
+###
+
+
+
+

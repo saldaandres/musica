@@ -30,6 +30,7 @@
     }
 
     #navbarLeft, #navbarRight {
+        background-image: none;
         background-color: transparent;
         color: #0c0304;
     }

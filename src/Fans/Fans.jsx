@@ -1,35 +1,62 @@
-import React from "react";
+import {useEffect, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './Fans.css'
 import {Formulario} from "../Formulario/Formulario.jsx";
+import Swal from "sweetalert2";
 
 export function Fans() {
+
+    const [indice, setIndice] = useState(null)
+    const[correcta, setCorrecta] = useState(null)
+
+    function actualizarChequeo(index, correcta) {
+        if (index == correcta) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Bien hecho'
+            })
+            return
+        }
+        Swal.fire({
+            icon: "error",
+            title: "Te equivocaste"
+        })
+    }
+
+
+
     let preguntas = [
         {
             id: 1,
-            pregunta: "Quien fue el baterista original de la banda?",
-            opciones: [ "Tony Kenning", "Steve Clark", "Rick Allen", "Jeff Rich"]
+            pregunta: "¿Cual de los siguientes NUNCA fue el nombre de la banda?",
+            opciones: [ "Gothic Plague", "Psychedelic Porn Crumpets", "Rocket Baby Dolls"],
+            correcta: 1
         },
         {
             id: 2,
-            pregunta: "Donde se presentaron por primera vez en publico?",
-            opciones: ["Hammersmith Odeon", "Odeon", "Westfield School", "Youngmen's Working Club"]
+            pregunta: "¿Cual es el origen del nombre de la cancion Muscle Museum?",
+            opciones: ["Era el nombre del gimnasio de Dom Howard", "Una tienda en Teignmouth, Devon", "Son las" +
+            " palabras que están antes y después de 'Muse' en el diccionario"],
+            correcta: 2
         },
         {
             id: 3,
-            pregunta: "Cual es el apado de Rick Savage",
-            opciones: ["Savage", "Sav", "Rick", "Rick Savage"]
+            pregunta: "¿Donde se grabó el album en vivo Hallabaloo?",
+            opciones: ["Le Zenith Paris", "Wembley Stadium", "Old Trafford, Manchester"],
+            correcta: 0
         },
         {
             id: 4,
-            pregunta: "En que año se unio Rick Allen a la banda",
-            opciones: [1979, 1980, 1977, 1978]
+            pregunta: "¿Cual es la primera cancion en el album Showbiz?",
+            opciones: ["Muscle Museum", "Cave", "Sunburn"],
+            correcta: 2
         },
         {
             id: 5,
-            pregunta: "Cual fue el nombre de la disquera que los contrató en 1979?",
-            opciones: ["Mercury", "Phonogram", "Island", "Bludgeon Riffola"]
+            pregunta: "¿A que artista amenazaron con demandar por llamar su show en Las Vegas 'Muse'?",
+            opciones: ["Lady Gaga", "Celine Dion", "Queen"],
+            correcta: 1
         }
 
     ]
@@ -54,11 +81,14 @@ export function Fans() {
                         " button group"}>
                         {pregunta.opciones.map( (opcion, index) =>
                                     <>
-                                        <input type="radio" className="btn-check" name="vbtn-radio" id={"vbtn-radio" + pregunta.id + index} autoComplete="off" />
+                                        <input type="radio" className="btn-check" name="vbtn-radio" id={"vbtn-radio" + pregunta.id + index} autoComplete="off" onClick={() => {
+                                            actualizarChequeo(index, pregunta.correcta)
+                                        }} />
                                         <label className="btn btn-outline-danger" htmlFor={"vbtn-radio" + pregunta.id + index}>{opcion}</label>
                                     </>
                             )}
                     </div>
+                    <div className="resultado"></div>
                 </div>
             </div>
         </div>

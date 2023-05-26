@@ -9,14 +9,12 @@ export function Footer() {
         <section>
             <div className="fila text-bg-dark fst-italic text-uppercase fs-4">
                 <div className={"columna"}>
-                    <span><i className={"bi bi-c-circle text-danger"}></i> Def Leppard, 2023</span>
+                    <span><i className={"bi bi-c-circle"}></i> Muse, 2023</span>
                 </div>
                 <div className={"columna"}>
                     <span><i className={"bi bi-github text-bg-dark"}></i></span>
-                    <span className={"text-danger mx-2 fw-bold"}>//</span>
+                    <span className={"mx-2 "}>|</span>
                     <span>Andres Saldarriaga</span>
-                    <span className={"text-danger mx-2 fw-bold"}>//</span>
-                    <span><a className={"text-decoration-none link-light"} href="https://www.defleppard.com/">Paginal Real</a></span>
                 </div>
             </div>
         </section>

@@ -18,7 +18,7 @@ export function Menu() {
                             aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse fs-4 justify-content-end py-1 px-5" id="navbarLeft">
+                    <div className="collapse navbar-collapse fs-4 justify-content-end py-1 px-5 col-3" id="navbarLeft">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link className="nav-link fs-4" to={"/integrantes"}>Integrantes</Link>
@@ -26,19 +26,25 @@ export function Menu() {
                             <li className="nav-item">
                                 <Link className="nav-link" to={"/tienda"}>Tienda</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to={"/hooks"}>Hooks</Link>
+                            </li>
                         </ul>
                     </div>
                     <Link className="navbar-brand mx-4 p-0" id={"link-logo"} to={"/"}>
-                        <img className={"logo"} src="https://www.defleppard.com/wp-content/themes/def/images/logo.png"
+                        <img className={"logo"} src="/src/assets/img/muse.svg"
                             alt="def leppard logo"/>
                     </Link>
-                    <div className="collapse navbar-collapse py-1 px-5" id="navbarRight">
+                    <div className="collapse navbar-collapse py-1 px-5 col-3" id="navbarRight">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link className="nav-link" to={"/musica"}>Musica</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to={"/fans"}>Fans</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to={"/pruebaapi"}>Prueba</Link>
                             </li>
                         </ul>
                     </div>
