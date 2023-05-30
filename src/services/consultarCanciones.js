@@ -36,3 +36,18 @@ export async function obtenerToken() {
     let token = await respuesta.json()
     return token
 }
+
+export async function buscar(token, artista) {
+    const URI = `https://api.spotify.com/v1/search?q=${artista}&type=artist`
+    const TOKEN = `Bearer ${token}`
+    const options = {
+        method : "GET",
+        headers : {
+            Authorization: TOKEN
+        }
+    }
+
+    let respuesta = await fetch(URI, options)
+    let datos = respuesta.json()
+    return datos
+}

@@ -1,13 +1,27 @@
 import {useEffect, useState} from "react";
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import './Music.css'
 import {consultarCanciones, obtenerToken} from "../services/consultarCanciones.js";
 
+function Estrellas({rating}) {
+    let numeroEstrellas = Math.round(rating / 20)
+    return (
+        <div>
+            {[...new Array(numeroEstrellas)].map(numero =>
+                <span className={"bi bi-star"}> </span>
+            )}
+        </div>
+    )
+}
+
 function Reproductor({cancionElegida}) {
     return (
-        <div className={"reproductor"} style={{backgroundImage : `url("${cancionElegida.album.images[0].url}")`}}>
-            <p>{cancionElegida.name}</p>
+        <div className={"reproductor mx-auto rounded-5 d-flex flex-column justify-content-end align-items-center" +
+            " py-2"} style={{backgroundImage : `url("${cancionElegida.album.images[0].url}")`}}>
+            <h3 className={"text-light"}>{cancionElegida.name}</h3>
+            <audio controls src={cancionElegida.preview_url}></audio>
         </div>
     )
 }
@@ -28,14 +42,14 @@ export function Music() {
         let segundosTotales = milisegundos / 1000
         let minutos = Math.floor(segundosTotales / 60)
         let segundos = Math.floor(segundosTotales % 60)
-        let segundosDisplay = segundos > 10 ? segundos : `0${segundos}`
+        let segundosDisplay = segundos >= 10 ? segundos : `0${segundos}`
         return `${minutos}:${segundosDisplay}`
     }
 
     useEffect(() => {
         obtenerToken().then(respuesta => {
             setToken(respuesta.access_token)
-            console.log(respuesta)
+            //console.log(respuesta)
         })
     }, [])
 
@@ -68,6 +82,9 @@ export function Music() {
             <td className={"ocultar"}>
                 <p>{ cancion.album.name}</p>
             </td>
+            <td className={"ocultar"}>
+                    <Estrellas rating={cancion.popularity}></Estrellas>
+            </td>
             <td>
                 {calcularDuracion(cancion.duration_ms)}
             </td>
@@ -75,7 +92,7 @@ export function Music() {
     )
 
     return(
-        <>
+        <div className={"bg-dark py-5"}>
             <Reproductor cancionElegida={cancionElegida}></Reproductor>
             <table className={"table table-dark table-hover table-borderless"}>
                 <thead>
@@ -83,6 +100,7 @@ export function Music() {
                         <th className={"ocultar"}>#</th>
                         <th>Titulo</th>
                         <th className={"ocultar"}>Album</th>
+                        <th className={"ocultar"}>Popularidad</th>
                         <th><i className={"bi bi-stopwatch"}></i></th>
                     </tr>
                 </thead>
@@ -90,7 +108,6 @@ export function Music() {
                 {tableRows}
                 </tbody>
             </table>
-
-        </>
+        </div>
     )
 }

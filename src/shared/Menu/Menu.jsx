@@ -29,6 +29,9 @@ export function Menu() {
                             <li className="nav-item">
                                 <Link className="nav-link" to={"/hooks"}>Hooks</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to={"/search"}>Search</Link>
+                            </li>
                         </ul>
                     </div>
                     <Link className="navbar-brand mx-4 p-0" id={"link-logo"} to={"/"}>

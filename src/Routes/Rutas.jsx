@@ -7,6 +7,7 @@ import {Shop} from "../Shop/Shop.jsx";
 import {Carga} from "../Hooks/Carga.jsx";
 import {Music} from "../Music/Music";
 import {PruebaApi} from "../PruebaApi/PruebaApi.jsx";
+import {Search} from "../Search/Search.jsx";
 
 
 export function Rutas() {
@@ -20,7 +21,7 @@ export function Rutas() {
                 <Route path="/tienda" element={<Shop />} />
                 <Route path={"/hooks"} element={<Carga />} />
                 <Route path={"/musica"} element={<Music />} />
-                <Route path={"/pruebaapi"} element={<PruebaApi />} />
+                <Route path={"/search"} element={<Search />} />
             </Routes>
         </>
     )
